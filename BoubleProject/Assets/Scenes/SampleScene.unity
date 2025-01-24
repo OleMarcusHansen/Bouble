@@ -352,17 +352,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GasBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 3396059795674465301, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
+      propertyPath: gasType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3693224522255248102, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09623104
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 3693224522255248102, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09116656
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 3693224522255248102, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.027552458
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3693224522255248102, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -411,15 +415,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09623104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09116656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.027552458
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalRotation.w
