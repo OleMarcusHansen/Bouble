@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Drift : MonoBehaviour
 {
-    public float driftBaseVel = 0.5f;
-    public float driftBaseRange = 0.5f;
+    public float driftBaseVel = 0.05f;
+    public float driftBaseDirection = 0.5f;
     private Vector3 initialPosition;
     
 
@@ -16,7 +16,7 @@ public class Drift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
+        float driftHorizontalMove = driftBaseVel * driftBaseDirection;
+        transform.position += new Vector3(driftHorizontalMove, 0, 0);
     }
 }
