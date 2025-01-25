@@ -141,9 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786f11f36e3e71546a69b2663c73151d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driftBaseVel: 0.0007
+  driftBaseVel: 0.17
   driftHorizontalDirection: 0.5
-  driftVerticalDirection: 0.5
+  driftVerticalDirection: 0.05
+  directionflactuation: 0.05
+  directionRange: 1
 --- !u!1 &627779984
 GameObject:
   m_ObjectHideFlags: 0

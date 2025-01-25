@@ -5,6 +5,8 @@ public class Drift : MonoBehaviour
     public float driftBaseVel = 0.05f;
     public float driftHorizontalDirection = 0.5f;
     public float driftVerticalDirection = 0.5f;
+    public float directionflactuation = 0.5f;
+    public float directionRange = 0.5f;
     private Vector3 initialPosition;
     
 
@@ -17,6 +19,7 @@ public class Drift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        driftHorizontalDirection = Mathf.Sin(Time.time * directionflactuation) * directionRange;
         float driftHorizontalMove = driftBaseVel * driftHorizontalDirection;
         float driftVerticalMove = driftBaseVel * driftVerticalDirection;
         transform.position += new Vector3(driftHorizontalMove, driftVerticalMove, 0);
