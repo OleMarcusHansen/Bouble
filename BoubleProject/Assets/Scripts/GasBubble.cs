@@ -14,6 +14,7 @@ public class GasBubble : MonoBehaviour
     void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        UpdateBubble();
     }
 
     public void SetGasses(float ox, float up, float down)
@@ -31,5 +32,7 @@ public class GasBubble : MonoBehaviour
         circleCollider.radius = (oxygen + upgas + downgas) / 10f / 2f;
 
         //set color
+        float total = downgas + upgas + oxygen;
+        bubbleSprite.color = new Color(downgas / total, upgas / total, oxygen / total, 0.5f);
     }
 }
