@@ -5,11 +5,13 @@ public class BubbleSplit : MonoBehaviour
 {
     public MovementBehavior movementBehavior;
     public GameObject bubblePrefab;
+    public PlayerBubble playerBubble;
     public float minScale = 1f;
     private Vector3 bubblesize;
     void SplitBubble(){
             GameObject bubblecopy = Instantiate(bubblePrefab, transform.position, Quaternion.identity);
             bubblecopy.transform.localScale = bubblesize/2;
+            bubblecopy.GetComponent<GasBubble>().SetGasses(playerBubble.oxygen, playerBubble.upgas, playerBubble.downgas); 
             bubblesize.x /= 2;
             bubblesize.y /= 2;
             movementBehavior.bubbleBoostValue = 100f;
@@ -24,6 +26,7 @@ public class BubbleSplit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space) && bubblesize.x > minScale +1 && bubblesize.y > minScale +1)
         {
             SplitBubble();  

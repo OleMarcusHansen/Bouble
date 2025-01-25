@@ -37,7 +37,6 @@ Transform:
   m_Children:
   - {fileID: 4625869555557159056}
   - {fileID: 9222161503077243626}
-  - {fileID: 2864367915973905060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &83744747488154020
@@ -112,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementBehavior: {fileID: 6995078487472169260}
   bubblePrefab: {fileID: 2118672603113338405, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
+  playerBubble: {fileID: 0}
   minScale: 0
 --- !u!114 &6995078487472169260
 MonoBehaviour:
@@ -262,7 +262,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5301303043633121538}
-  m_Father: {fileID: 6309288402871295357}
+  m_Father: {fileID: 9222161503077243626}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8184072837278742749
 SpriteRenderer:
@@ -448,7 +448,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2864367915973905060}
   m_Father: {fileID: 6309288402871295357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1701938485121594540
