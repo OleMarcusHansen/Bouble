@@ -206,9 +206,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 83744747488154020, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_Mass
+      value: 7.0685835
+      objectReference: {fileID: 0}
+    - target: {fileID: 83744747488154020, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1287614156636944002, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_Name
       value: PlayerBubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227754857634897750, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,14 +693,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972277200}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: -0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
