@@ -125,7 +125,10 @@ MonoBehaviour:
   oxygen: 10
   upgas: 10
   downgas: 10
-  bubbleSprite: {fileID: 9222161503077243626}
+  bubbleSprite: {fileID: 1701938485121594540}
+  oxygenText: {fileID: 0}
+  upgasText: {fileID: 0}
+  downgasText: {fileID: 0}
 --- !u!58 &706001550718969586
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -51,7 +51,7 @@ MonoBehaviour:
   oxygen: 0
   upgas: 0
   downgas: 0
-  bubbleSprite: {fileID: 4942334022709654376}
+  bubbleSprite: {fileID: 5748051842192135682}
 --- !u!114 &-575252983460454082
 MonoBehaviour:
   m_ObjectHideFlags: 0

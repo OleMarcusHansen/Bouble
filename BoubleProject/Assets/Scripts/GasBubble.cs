@@ -8,7 +8,7 @@ public class GasBubble : MonoBehaviour
     public float upgas;
     public float downgas;
 
-    [SerializeField] Transform bubbleSprite;
+    [SerializeField] SpriteRenderer bubbleSprite;
     CircleCollider2D circleCollider;
 
     void Start()
@@ -27,7 +27,7 @@ public class GasBubble : MonoBehaviour
 
     protected void UpdateBubble()
     {
-        bubbleSprite.localScale = Vector3.one * (oxygen + upgas + downgas) / 10f;
+        bubbleSprite.transform.localScale = Vector3.one * (oxygen + upgas + downgas) / 10f;
         circleCollider.radius = (oxygen + upgas + downgas) / 10f / 2f;
 
         //set color
