@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Drift : MonoBehaviour
 {
-    public int driftBaseVel = 1;
+    public float driftBaseVel = 0.5f;
+    public float driftBaseRange = 0.5f;
     private Vector3 initialPosition;
     
 
