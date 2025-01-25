@@ -44,7 +44,7 @@ public class PlayerBubble : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collided with: " + collision.gameObject);
 
