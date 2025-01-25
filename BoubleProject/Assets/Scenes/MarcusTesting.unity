@@ -250,6 +250,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9222161503077243626, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222161503077243626, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -257,6 +265,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1287614156636944002, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1432390856}
+    - targetCorrespondingSourceObject: {fileID: 1287614156636944002, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432390859}
   m_SourcePrefab: {fileID: 100100000, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
 --- !u!4 &409748234 stripped
 Transform:
@@ -277,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3693224522255248102, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5188384
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 3693224522255248102, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -611,6 +622,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleSprite: {fileID: 409748234}
+--- !u!58 &1432390859
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432390855}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.5
 --- !u!1001 &7456475291965508902
 PrefabInstance:
   m_ObjectHideFlags: 0
