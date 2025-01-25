@@ -1,48 +1,21 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerBubble : MonoBehaviour
+public class PlayerBubble : GasBubble
 {
-    float oxygen = 10;
-    float upgas = 10;
-    float downgas = 10;
-
-    [SerializeField] Transform bubbleSprite;
-    CircleCollider2D circleCollider;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        circleCollider = GetComponent<CircleCollider2D>();
-    }
-
     // Update is called once per frame
     void Update()
     {
         oxygen -= Time.deltaTime;
 
-        UpdateSize();
+        UpdateBubble();
     }
 
-    void AddOxygen(float amount)
+    void AddGasses(float ox, float up, float down)
     {
-        oxygen += amount;
+        oxygen += ox;
+        upgas += up;
+        downgas += down;
     }
-    void AddUpgas(float amount)
-    {
-        upgas += amount;
-    }
-    void AddDowngas(float amount)
-    {
-        downgas += amount;
-    }
-
-    void UpdateSize()
-    {
-        bubbleSprite.localScale = Vector3.one * (oxygen + upgas + downgas) / 10f;
-        circleCollider.radius = (oxygen + upgas + downgas) / 10f / 2f;
-    }
-
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -50,7 +23,11 @@ public class PlayerBubble : MonoBehaviour
 
         if (collision.gameObject.GetComponent<GasBubble>())
         {
+            GasBubble otherBubble = collision.gameObject.GetComponent<GasBubble>();
 
+            AddGasses(otherBubble.oxygen, otherBubble.upgas, otherBubble.downgas);
+
+            Destroy(otherBubble.gameObject);
         }
     }
 }
