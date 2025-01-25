@@ -11,9 +11,12 @@ public class GasBubble : MonoBehaviour
     [SerializeField] SpriteRenderer bubbleSprite;
     CircleCollider2D circleCollider;
 
-    void Start()
+    private void Awake()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+    }
+    void Start()
+    {
         UpdateBubble();
     }
 
