@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3693224522255248102}
   - component: {fileID: 3396059795674465301}
+  - component: {fileID: -575252983460454082}
   m_Layer: 0
   m_Name: GasBubble
   m_TagString: Untagged
@@ -46,6 +47,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gasType: 0
+--- !u!114 &-575252983460454082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118672603113338405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786f11f36e3e71546a69b2663c73151d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  driftBaseVel: 0.005
+  driftHorizontalDirection: 0.5
+  driftVerticalDirection: 0.1
+  directionflactuation: 0.5
+  directionRange: 0.5
 --- !u!1 &5324896339683277675
 GameObject:
   m_ObjectHideFlags: 0
