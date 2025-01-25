@@ -1130,53 +1130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1267577057
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1267577059}
-  - component: {fileID: 1267577058}
-  m_Layer: 0
-  m_Name: SpawnBubbleManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1267577058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267577057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83e6db5db0b2924e8cbbcf927441623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gasBubblePrefab: {fileID: 2118672603113338405, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
-  playerDrift: {fileID: 368660574}
-  spawnDistance: 10
---- !u!4 &1267577059
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267577057}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2849696, y: 0.7671857, z: -0.1613109}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1392547890 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8444972708708610556, guid: 957a92c474eb37441a6e43af7f608422, type: 3}
@@ -1355,6 +1308,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1238904389773064530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3551297040044043052, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_Name
+      value: SpawnBubbleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2849696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7671857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1613109
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171903490599115303, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: playerDrift
+      value: 
+      objectReference: {fileID: 368660574}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
 --- !u!1001 &7456475291965508902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,4 +1479,4 @@ SceneRoots:
   - {fileID: 1062498269}
   - {fileID: 704700518}
   - {fileID: 1078367768}
-  - {fileID: 1267577059}
+  - {fileID: 1238904389773064530}
