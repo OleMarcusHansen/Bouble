@@ -5,7 +5,7 @@ public class SpawnBubbleManager : MonoBehaviour
 {
     [SerializeField] GameObject gasBubblePrefab;
 
-    [SerializeField] Drift playerDrift;
+    Drift playerDrift;
 
     [SerializeField] float spawnDistance = 10;
 
@@ -18,7 +18,7 @@ public class SpawnBubbleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerDrift = GameObject.FindGameObjectWithTag("Player").GetComponent<Drift>();
     }
 
     void SpawnBubbleAhead()
