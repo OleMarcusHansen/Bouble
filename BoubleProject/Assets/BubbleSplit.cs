@@ -12,7 +12,7 @@ public class BubbleSplit : MonoBehaviour
             bubblecopy.transform.localScale = bubblesize/2;
             bubblesize.x /= 2;
             bubblesize.y /= 2;
-            movementBehavior.bubbleBoostValue = 150f;
+            movementBehavior.bubbleBoostValue = 10f;
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

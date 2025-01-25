@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class MovementBehavior : MonoBehaviour
 {
+    public GameObject splitIndicator;
     public float bubbleBoostValue = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,9 +14,12 @@ public class MovementBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontalMove = 1f * bubbleBoostValue;
-        float moveVerticalMove = 1f * bubbleBoostValue;
-        transform.position += new Vector3(moveHorizontalMove, moveVerticalMove, 0);
-        bubbleBoostValue -= 1;
+        Vector3 splitIndicatorDirection = splitIndicator.transform.right;
+        float moveHorizontalMove = 0.035f * bubbleBoostValue;
+        float moveVerticalMove = 0.035f * bubbleBoostValue;
+        transform.position += splitIndicatorDirection * moveHorizontalMove * bubbleBoostValue;
+        if (bubbleBoostValue > 0) {
+            bubbleBoostValue -= 1f;
+        }
     }
 }
