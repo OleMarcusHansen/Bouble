@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerBubble : GasBubble
 {
+
     // Update is called once per frame
     void Update()
     {

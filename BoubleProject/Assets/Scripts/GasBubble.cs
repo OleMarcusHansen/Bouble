@@ -8,6 +8,8 @@ public class GasBubble : MonoBehaviour
     public float upgas;
     public float downgas;
 
+    public float gasTotal;
+
     [SerializeField] SpriteRenderer bubbleSprite;
     CircleCollider2D circleCollider;
 
@@ -26,6 +28,8 @@ public class GasBubble : MonoBehaviour
         upgas = up;
         downgas = down;
 
+        gasTotal = downgas + upgas + oxygen;
+
         UpdateBubble();
     }
 
@@ -35,7 +39,7 @@ public class GasBubble : MonoBehaviour
         circleCollider.radius = (oxygen + upgas + downgas) / 10f / 2f;
 
         //set color
-        float total = downgas + upgas + oxygen;
-        bubbleSprite.color = new Color(downgas / total, upgas / total, oxygen / total, 0.5f);
+        gasTotal = downgas + upgas + oxygen;
+        bubbleSprite.color = new Color(downgas / gasTotal, upgas / gasTotal, oxygen / gasTotal, 0.5f);
     }
 }
