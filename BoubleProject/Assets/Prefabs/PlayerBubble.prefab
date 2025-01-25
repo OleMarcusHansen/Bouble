@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8108474423182086532}
   - component: {fileID: 5378100330016927724}
   - component: {fileID: 6995078487472169260}
+  - component: {fileID: 5417256362172064736}
   m_Layer: 0
   m_Name: PlayerBubble
   m_TagString: Player
@@ -126,6 +127,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splitIndicator: {fileID: 3794718706210720758}
   bubbleBoostValue: 0
+--- !u!114 &5417256362172064736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287614156636944002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f85c579b410a54b9976fbfdf06df87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxygen: 0
+  upgas: 0
+  downgas: 0
+  bubbleSprite: {fileID: 0}
 --- !u!1 &2113368693063206918
 GameObject:
   m_ObjectHideFlags: 0
