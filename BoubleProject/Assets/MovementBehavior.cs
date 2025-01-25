@@ -15,7 +15,7 @@ public class MovementBehavior : MonoBehaviour
     void Update()
     {
         Vector3 splitIndicatorDirection = splitIndicator.transform.right;
-        float moveHorizontalMove = 0.0001f * bubbleBoostValue;
+        float moveHorizontalMove = 0.00002f * bubbleBoostValue;
         float moveVerticalMove = 0.035f * bubbleBoostValue;
         transform.position += splitIndicatorDirection * moveHorizontalMove * bubbleBoostValue;
         if (bubbleBoostValue > 0) {
