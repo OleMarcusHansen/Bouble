@@ -19,6 +19,6 @@ public class Drift : MonoBehaviour
     {
         float driftHorizontalMove = driftBaseVel * driftHorizontalDirection;
         float driftVerticalMove = driftBaseVel * driftVerticalDirection;
-        transform.position += new Vector3(driftHorizontalMove, driftVerticalDirection, 0);
+        transform.position += new Vector3(driftHorizontalMove, driftVerticalMove, 0);
     }
 }

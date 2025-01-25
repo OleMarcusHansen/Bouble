@@ -141,8 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786f11f36e3e71546a69b2663c73151d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driftBaseVel: 0.007
-  driftBaseDirection: 0.5
+  driftBaseVel: 0.0007
+  driftHorizontalDirection: 0.5
+  driftVerticalDirection: 0.5
 --- !u!1 &627779984
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +409,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 83744747488154020, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 83744747488154020, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_UseAutoMass
       value: 1
