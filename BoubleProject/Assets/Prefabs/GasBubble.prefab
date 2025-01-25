@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b79f727835d8649b8162e214bd010c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gracePeriod: 0
   oxygen: 0
   upgas: 0
   downgas: 0
+  gasTotal: 0
   bubbleSprite: {fileID: 5748051842192135682}
 --- !u!114 &-575252983460454082
 MonoBehaviour:
@@ -64,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786f11f36e3e71546a69b2663c73151d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driftBaseVel: 0.005
+  driftBaseVel: 0
   driftHorizontalDirection: 0.5
   driftVerticalDirection: 0.1
   directionflactuation: 0.5

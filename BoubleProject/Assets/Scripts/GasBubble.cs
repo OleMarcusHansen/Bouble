@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GasBubble : MonoBehaviour
 {
+    public bool gracePeriod;
     public float oxygen;
     public float upgas;
     public float downgas;
@@ -16,6 +17,7 @@ public class GasBubble : MonoBehaviour
     private void Awake()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        gracePeriod = true;
     }
     void Start()
     {

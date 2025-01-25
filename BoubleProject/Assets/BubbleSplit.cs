@@ -10,27 +10,27 @@ public class BubbleSplit : MonoBehaviour
     private Vector3 bubblesize;
     void SplitBubble(){
             GameObject bubblecopy = Instantiate(bubblePrefab, transform.position, Quaternion.identity);
-            bubblecopy.transform.localScale = bubblesize/2;
-            bubblecopy.GetComponent<GasBubble>().SetGasses(playerBubble.oxygen, playerBubble.upgas, playerBubble.downgas); 
-            bubblesize.x /= 2;
-            bubblesize.y /= 2;
+            bubblecopy.GetComponent<GasBubble>().SetGasses(playerBubble.oxygen/2, playerBubble.upgas/2, playerBubble.downgas/2); 
+            playerBubble.oxygen /= 2;
+            playerBubble.upgas /= 2;
+            playerBubble.downgas /= 2;
             movementBehavior.bubbleBoostValue = 100f;
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        bubblesize = transform.localScale;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && bubblesize.x > minScale +1 && bubblesize.y > minScale +1)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SplitBubble();  
         }
-        transform.localScale = bubblesize;
+
     }
 }

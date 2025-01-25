@@ -6,8 +6,9 @@ public class PlayerBubble : GasBubble
     // Update is called once per frame
     void Update()
     {
-        oxygen -= Time.deltaTime;
-
+        if (oxygen > 0){
+            oxygen -= Time.deltaTime* 0.1f;
+        }
         UpdateBubble();
     }
 
@@ -25,10 +26,11 @@ public class PlayerBubble : GasBubble
         if (collision.gameObject.GetComponent<GasBubble>())
         {
             GasBubble otherBubble = collision.gameObject.GetComponent<GasBubble>();
+                if (!otherBubble.gracePeriod){
+                    AddGasses(otherBubble.oxygen, otherBubble.upgas, otherBubble.downgas);
+                    Destroy(otherBubble.gameObject);
+                }
 
-            AddGasses(otherBubble.oxygen, otherBubble.upgas, otherBubble.downgas);
-
-            Destroy(otherBubble.gameObject);
         }
     }
 }
