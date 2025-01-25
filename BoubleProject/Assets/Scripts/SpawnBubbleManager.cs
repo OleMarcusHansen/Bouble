@@ -19,6 +19,7 @@ public class SpawnBubbleManager : MonoBehaviour
 
     void SpawnBubble(Vector3 position)
     {
-        Instantiate(gasBubblePrefab, position, new Quaternion(0, 0, 0, 0));
+        GasBubble newBubble = Instantiate(gasBubblePrefab, position, new Quaternion(0, 0, 0, 0)).GetComponent<GasBubble>();
+        newBubble.SetGasses(Random.Range(0, 10), Random.Range(0, 10), Random.Range(0, 10));
     }
 }
