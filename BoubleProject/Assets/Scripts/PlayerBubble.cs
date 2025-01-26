@@ -1,5 +1,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerBubble : GasBubble
 {
@@ -8,7 +10,20 @@ public class PlayerBubble : GasBubble
     private float sizeDiff;
     public float cameraScaleSpeed = 0.05f;
     public float cameraZoomLimit = 1;
-    
+
+    [SerializeField] Volume postProcessingVolume;
+    Vignette vignette;
+
+    void Start()
+    {
+        UpdateBubble();
+
+        if (postProcessingVolume.profile.TryGet<Vignette>(out Vignette foundVignette))
+        {
+            vignette = foundVignette;
+        }
+    }
+
     // Update is called once per frame
     public void CameraAdjustSize(){
         cinemachineCameraIdealsize = gasTotal/8;
@@ -21,8 +36,19 @@ public class PlayerBubble : GasBubble
     void Update()
     {
         if (oxygen > 0){
-            oxygen -= Time.deltaTime* 0.2f;
+            oxygen -= Time.deltaTime * 0.4f;
         }
+
+        if (oxygen < 10)
+        {
+            float intensity = Mathf.Lerp(0.2f, 1, (10 - oxygen) / 10);
+            vignette.intensity.Override(intensity);
+        }
+        else
+        {
+            vignette.intensity.Override(0.2f);
+        }
+
         UpdateBubble();
 
         if (oxygen < 0 || gasTotal < 10)
