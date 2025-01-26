@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gasBubblePrefab: {fileID: 2118672603113338405, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
-  playerDrift: {fileID: 0}
-  spawnDistance: 10
+  seaMinePrefab: {fileID: 2118672603113338405, guid: 8e869804868a5c14abc3e53f148011ac, type: 3}
+  spawnDistance: 40
