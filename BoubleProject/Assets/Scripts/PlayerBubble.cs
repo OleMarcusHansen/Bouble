@@ -7,7 +7,7 @@ public class PlayerBubble : GasBubble
     void Update()
     {
         if (oxygen > 0){
-            oxygen -= Time.deltaTime* 0.1f;
+            oxygen -= Time.deltaTime* 0.2f;
         }
         UpdateBubble();
 

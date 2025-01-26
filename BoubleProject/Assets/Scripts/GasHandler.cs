@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GasHandler : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GasHandler : MonoBehaviour
     [SerializeField] TMP_Text downgasText;
 
     [SerializeField] GameObject loseScreen;
+    [SerializeField] TMP_Text loseText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +28,13 @@ public class GasHandler : MonoBehaviour
 
         if (player.oxygen < 0 || player.gasTotal < 10)
         {
+            loseText.text = "You died :(\nYour final score was: " + Mathf.Floor(player.transform.position.y).ToString() + " m";
             loseScreen.SetActive(true);
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }

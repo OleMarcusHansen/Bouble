@@ -244,6 +244,7 @@ MonoBehaviour:
   upgasText: {fileID: 4291808203976194300}
   downgasText: {fileID: 8444972708708610556}
   loseScreen: {fileID: 7077839016703872933}
+  loseText: {fileID: 6512567514068057901}
 --- !u!1 &1825013969457044631
 GameObject:
   m_ObjectHideFlags: 0
