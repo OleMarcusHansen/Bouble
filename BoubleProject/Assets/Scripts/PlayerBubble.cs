@@ -54,6 +54,11 @@ public class PlayerBubble : GasBubble
                 }
 
         }
+        else if (collision.gameObject.GetComponent<SeaMine>())
+        {
+            Destroy(collision.gameObject);
+            AddGasses(oxygen / -2, upgas / -2, downgas / -2);
+        }
 
 
     }
