@@ -33,6 +33,7 @@ public class PlayerBubble : GasBubble
         {
             GasBubble otherBubble = collision.gameObject.GetComponent<GasBubble>();
                 if (!otherBubble.gracePeriod){
+                    otherBubble.gracePeriod = true;
                     AddGasses(otherBubble.oxygen, otherBubble.upgas, otherBubble.downgas);
                     Destroy(otherBubble.gameObject);
                 }
