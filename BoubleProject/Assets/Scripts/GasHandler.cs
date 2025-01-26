@@ -9,6 +9,8 @@ public class GasHandler : MonoBehaviour
     [SerializeField] TMP_Text upgasText;
     [SerializeField] TMP_Text downgasText;
 
+    [SerializeField] GameObject loseScreen;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,5 +23,10 @@ public class GasHandler : MonoBehaviour
         oxygenText.text = "Oxygen: \n" + Mathf.Round(player.oxygen * 10f) / 10f;
         upgasText.text = "Upgas: \n" + Mathf.Round(player.upgas * 10f) / 10f;
         downgasText.text = "Downgas: \n" + Mathf.Round(player.downgas * 10f) / 10f;
+
+        if (player.oxygen < 0 || player.gasTotal < 10)
+        {
+            loseScreen.SetActive(true);
+        }
     }
 }

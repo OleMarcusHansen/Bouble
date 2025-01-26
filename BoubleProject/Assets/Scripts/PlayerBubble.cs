@@ -10,6 +10,12 @@ public class PlayerBubble : GasBubble
             oxygen -= Time.deltaTime* 0.1f;
         }
         UpdateBubble();
+
+        if (oxygen < 0 || gasTotal < 10)
+        {
+            Debug.Log("Player died :(");
+            Time.timeScale = 0;
+        }
     }
 
     void AddGasses(float ox, float up, float down)
