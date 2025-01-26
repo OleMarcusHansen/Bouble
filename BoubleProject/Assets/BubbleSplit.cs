@@ -10,10 +10,10 @@ public class BubbleSplit : MonoBehaviour
     private Vector3 bubblesize;
     void SplitBubble(){
             GameObject bubblecopy = Instantiate(bubblePrefab, transform.position, Quaternion.identity);
-            bubblecopy.GetComponent<GasBubble>().SetGasses(playerBubble.oxygen/2, playerBubble.upgas/2, playerBubble.downgas/2); 
-            playerBubble.oxygen /= 2;
-            playerBubble.upgas /= 2;
-            playerBubble.downgas /= 2;
+            bubblecopy.GetComponent<GasBubble>().SetGasses(playerBubble.oxygen / 2f, playerBubble.upgas / 2f, playerBubble.downgas / 2f); 
+            playerBubble.oxygen /= 2f;
+            playerBubble.upgas /= 2f;
+            playerBubble.downgas /= 2f;
             movementBehavior.bubbleBoostValue = 100f;
 
     }

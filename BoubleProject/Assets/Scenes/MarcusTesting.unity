@@ -1434,6 +1434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnBubbleManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3551297040044043052, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2849696
