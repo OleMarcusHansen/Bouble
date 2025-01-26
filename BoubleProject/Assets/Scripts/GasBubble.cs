@@ -18,10 +18,16 @@ public class GasBubble : MonoBehaviour
     {
         circleCollider = GetComponent<CircleCollider2D>();
         gracePeriod = true;
+        Invoke(nameof(DisableGracePeriod), 1);
     }
     void Start()
     {
         UpdateBubble();
+    }
+
+    void DisableGracePeriod()
+    {
+        gracePeriod = false;
     }
 
     public void SetGasses(float ox, float up, float down)
