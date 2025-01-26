@@ -448,6 +448,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 4625869555557159056, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625869555557159056, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625869555557159056, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625869555557159056, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 5301303043633121538, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.386
@@ -474,12 +490,20 @@ PrefabInstance:
       objectReference: {fileID: 1538993548}
     - target: {fileID: 5417256362172064736, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: oxygen
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5417256362172064736, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: bubbleSprite
       value: 
       objectReference: {fileID: 1999735866}
+    - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5378100330016927724}
   - component: {fileID: 6995078487472169260}
   - component: {fileID: 5417256362172064736}
+  - component: {fileID: 1770457693305641642}
   m_Layer: 0
   m_Name: PlayerBubble
   m_TagString: Player
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.05, y: 2.05, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4625869555557159056}
@@ -47,11 +48,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287614156636944002}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 3.3006358
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementBehavior: {fileID: 6995078487472169260}
   bubblePrefab: {fileID: 2118672603113338405, guid: 474b36fe074479445ae16d87e0b114c7, type: 3}
-  playerBubble: {fileID: 0}
+  playerBubble: {fileID: 5417256362172064736}
   minScale: 0
 --- !u!114 &6995078487472169260
 MonoBehaviour:
@@ -139,10 +140,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f85c579b410a54b9976fbfdf06df87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygen: 0
+  gracePeriod: 0
+  oxygen: 20
   upgas: 0
   downgas: 0
-  bubbleSprite: {fileID: 0}
+  gasTotal: 0
+  bubbleSprite: {fileID: 1701938485121594540}
+--- !u!58 &1770457693305641642
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287614156636944002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &2113368693063206918
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 2113368693063206918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.447, y: 0.019, z: 0}
+  m_LocalPosition: {x: 0.386, y: -0.004, z: 0}
   m_LocalScale: {x: 0.12810004, y: 0.112392485, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -358,8 +397,8 @@ Transform:
   m_GameObject: {fileID: 5269617470222514415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.027, y: 0.08, z: 0}
+  m_LocalScale: {x: 0.37, y: 0.37, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6309288402871295357}
