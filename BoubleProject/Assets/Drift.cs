@@ -22,7 +22,7 @@ public class Drift : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        driftHorizontalDirection = Mathf.Sin(Time.time * directionflactuation * HorizontalFlactuationMulti * horizonalDirectionRange;
+        driftHorizontalDirection = Mathf.Sin(Time.time * directionflactuation * HorizontalFlactuationMulti) * horizonalDirectionRange;
         driftVerticalDirection = Mathf.Sin(Time.time * directionflactuation* verticalFlactuationMulti) * verticalDirectionRange;
         float driftHorizontalMove = driftBaseVel * driftHorizontalDirection;
         float driftVerticalMove = driftBaseVel * driftVerticalDirection;
