@@ -215,6 +215,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 368660575}
     - target: {fileID: 5417256362172064736, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: oxygen
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417256362172064736, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: bubbleSprite
       value: 
       objectReference: {fileID: 827297066}
@@ -270,6 +274,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 368660581}
   m_SourcePrefab: {fileID: 100100000, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+--- !u!4 &223426374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+  m_PrefabInstance: {fileID: 223426373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235896220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1058,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 223426374}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -1081,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 1078367764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.06}
+  m_LocalPosition: {x: 0, y: -0.15, z: -2.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1320,7 +1329,7 @@ Transform:
   m_GameObject: {fileID: 1802327635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.06}
+  m_LocalPosition: {x: 0, y: -0.15, z: -2.06}
   m_LocalScale: {x: 2.05, y: 2.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1469,6 +1478,10 @@ PrefabInstance:
       propertyPath: playerDrift
       value: 
       objectReference: {fileID: 368660574}
+    - target: {fileID: 8171903490599115303, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
+      propertyPath: spawnDistance
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
