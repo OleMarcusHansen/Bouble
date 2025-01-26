@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 1696303626854449571, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: speedMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5378100330016927724, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: playerBubble
       value: 
@@ -1331,7 +1335,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.15, z: -2.06}
   m_LocalScale: {x: 2.05, y: 2.05, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1436,7 +1440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551297040044043052, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4167202986239122824, guid: 3227909f26c1632498a3ee8c304d816d, type: 3}
       propertyPath: m_LocalPosition.x
