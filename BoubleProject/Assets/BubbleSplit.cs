@@ -29,7 +29,10 @@ public class BubbleSplit : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SplitBubble();  
+            if (playerBubble.gasTotal > 25)
+            {
+                SplitBubble();
+            }
         }
 
     }
