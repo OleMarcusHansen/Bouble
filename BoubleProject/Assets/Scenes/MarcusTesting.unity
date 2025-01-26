@@ -242,6 +242,10 @@ PrefabInstance:
       propertyPath: cinemachineCamera
       value: 
       objectReference: {fileID: 1078367767}
+    - target: {fileID: 5417256362172064736, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
+      propertyPath: postProcessingVolume
+      value: 
+      objectReference: {fileID: 1062498268}
     - target: {fileID: 6309288402871295357, guid: dec052f2e9b3b4c4f9cfacdc70ea4650, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1217,7 +1221,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
