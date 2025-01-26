@@ -18,10 +18,14 @@ public class PlayerBubble : GasBubble
     {
         UpdateBubble();
 
-        if (postProcessingVolume.profile.TryGet<Vignette>(out Vignette foundVignette))
+        if (postProcessingVolume != null)
         {
-            vignette = foundVignette;
+            if (postProcessingVolume.profile.TryGet<Vignette>(out Vignette foundVignette))
+            {
+                vignette = foundVignette;
+            }
         }
+
     }
 
     // Update is called once per frame
@@ -39,14 +43,17 @@ public class PlayerBubble : GasBubble
             oxygen -= Time.deltaTime * 0.4f;
         }
 
-        if (oxygen < 10)
+        if (postProcessingVolume != null)
         {
-            float intensity = Mathf.Lerp(0.2f, 1, (10 - oxygen) / 10);
-            vignette.intensity.Override(intensity);
-        }
-        else
-        {
-            vignette.intensity.Override(0.2f);
+            if (oxygen < 10)
+            {
+                float intensity = Mathf.Lerp(0.2f, 1, (10 - oxygen) / 10);
+                vignette.intensity.Override(intensity);
+            }
+            else
+            {
+                vignette.intensity.Override(0.2f);
+            }
         }
 
         UpdateBubble();
@@ -54,7 +61,7 @@ public class PlayerBubble : GasBubble
         if (oxygen < 0 || gasTotal < 10)
         {
             Debug.Log("Player died :(");
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
         CameraAdjustSize();
     }
