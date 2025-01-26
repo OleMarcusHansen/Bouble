@@ -43,8 +43,8 @@ public class GasBubble : MonoBehaviour
 
     protected void UpdateBubble()
     {
-        bubbleSprite.transform.localScale = Vector3.one * (oxygen + upgas + downgas) / 10f;
-        circleCollider.radius = (oxygen + upgas + downgas) / 10f / 2f;
+        bubbleSprite.transform.localScale = Vector3.one + Vector3.one * (oxygen + upgas + downgas) / 20f;
+        circleCollider.radius = 1 + (oxygen + upgas + downgas) / 20f / 2f;
 
         //set color
         gasTotal = downgas + upgas + oxygen;
