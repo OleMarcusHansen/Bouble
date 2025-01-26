@@ -1,9 +1,23 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerBubble : GasBubble
 {
-
+    public CinemachineCamera cinemachineCamera;
+    private float cinemachineCameraIdealsize;
+    private float sizeDiff;
+    public float cameraScaleSpeed = 0.05f;
+    public float cameraZoomLimit = 1;
+    
     // Update is called once per frame
+    public void CameraAdjustSize(){
+        cinemachineCameraIdealsize = gasTotal/8;
+        sizeDiff = cinemachineCameraIdealsize - cinemachineCamera.Lens.OrthographicSize; 
+        cinemachineCamera.Lens.OrthographicSize += sizeDiff * cameraScaleSpeed; 
+        if (cinemachineCamera.Lens.OrthographicSize < 8){
+            cinemachineCamera.Lens.OrthographicSize = 8;
+        }
+    }
     void Update()
     {
         if (oxygen > 0){
@@ -16,6 +30,7 @@ public class PlayerBubble : GasBubble
             Debug.Log("Player died :(");
             Time.timeScale = 0;
         }
+        CameraAdjustSize();
     }
 
     void AddGasses(float ox, float up, float down)
@@ -39,5 +54,7 @@ public class PlayerBubble : GasBubble
                 }
 
         }
+
+
     }
 }
