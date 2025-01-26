@@ -14,7 +14,7 @@ public class BubbleSplit : MonoBehaviour
             playerBubble.oxygen /= 2f;
             playerBubble.upgas /= 2f;
             playerBubble.downgas /= 2f;
-            movementBehavior.bubbleBoostValue = 100f;
+            movementBehavior.bubbleBoostValue += 100f;
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
