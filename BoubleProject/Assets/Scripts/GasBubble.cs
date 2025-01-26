@@ -17,6 +17,7 @@ public class GasBubble : MonoBehaviour
     private void Awake()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        circleCollider.enabled = false;
         gracePeriod = true;
         Invoke(nameof(DisableGracePeriod), 1);
     }
@@ -28,6 +29,7 @@ public class GasBubble : MonoBehaviour
     void DisableGracePeriod()
     {
         gracePeriod = false;
+        circleCollider.enabled = true;
     }
 
     public void SetGasses(float ox, float up, float down)
@@ -44,7 +46,7 @@ public class GasBubble : MonoBehaviour
     protected void UpdateBubble()
     {
         bubbleSprite.transform.localScale = Vector3.one + Vector3.one * (oxygen + upgas + downgas) / 20f;
-        circleCollider.radius = 1 + (oxygen + upgas + downgas) / 20f / 2f;
+        circleCollider.radius = 0.5f + (oxygen + upgas + downgas) / 20f / 2f;
 
         //set color
         gasTotal = downgas + upgas + oxygen;
