@@ -8,7 +8,7 @@ public class PlayerBubble : GasBubble
     public CinemachineCamera cinemachineCamera;
     private float cinemachineCameraIdealsize;
     private float sizeDiff;
-    public float cameraScaleSpeed = 0.05f;
+    public float cameraScaleSpeed = 0.5f;
     public float cameraZoomLimit = 1;
 
     [SerializeField] Volume postProcessingVolume;
@@ -29,6 +29,10 @@ public class PlayerBubble : GasBubble
     }
 
     // Update is called once per frame
+ // Update is called once per frame
+  // Update is called once per frame
+   // Update is called once per frame
+   
     public void CameraAdjustSize(){
         cinemachineCameraIdealsize = gasTotal/8;
         sizeDiff = cinemachineCameraIdealsize - cinemachineCamera.Lens.OrthographicSize; 
